@@ -1,6 +1,9 @@
 import 'package:ewa_camp2_quizz_app/screens/category_screen.dart';
 import 'package:ewa_camp2_quizz_app/screens/login_screen.dart';
+import 'package:ewa_camp2_quizz_app/screens/questions_screen.dart';
+import 'package:ewa_camp2_quizz_app/screens/score_screen.dart';
 import 'package:ewa_camp2_quizz_app/screens/start_screen.dart';
+import 'package:ewa_camp2_quizz_app/screens/test.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
