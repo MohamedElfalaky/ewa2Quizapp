@@ -1,8 +1,12 @@
+import 'package:ewa_camp2_quizz_app/screens/login_screen.dart';
 import 'package:ewa_camp2_quizz_app/screens/start_screen.dart';
 import 'package:flutter/material.dart';
 
 class ScoreScreen extends StatelessWidget {
-  const ScoreScreen({super.key});
+  final int currentScore;
+  final int numOfQuestion;
+  ScoreScreen(
+      {super.key, required this.currentScore, required this.numOfQuestion});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +25,7 @@ class ScoreScreen extends StatelessWidget {
                     children: [
                       TextSpan(text: 'Nice, '),
                       TextSpan(
-                          text: 'Mohamed',
+                          text: userNameController.text,
                           style: TextStyle(fontSize: 28, color: Colors.red)),
                       TextSpan(text: ' you have finished the test'),
                     ]),
@@ -30,7 +34,7 @@ class ScoreScreen extends StatelessWidget {
                 height: 30,
               ),
               Text(
-                "Your score is 6/10",
+                "Your score is $currentScore/$numOfQuestion",
                 style: TextStyle(color: Color(0xff0080FF)),
               ),
               SizedBox(

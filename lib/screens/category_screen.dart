@@ -1,3 +1,4 @@
+import 'package:ewa_camp2_quizz_app/data/questions_and_answers.dart';
 import 'package:ewa_camp2_quizz_app/screens/questions_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -8,14 +9,19 @@ class CategoryScreen extends StatelessWidget {
   Widget categoryContainer(
       {required Color color,
       required String text,
-      required BuildContext context}) {
+      required BuildContext context,
+      required List questionList}) {
     return Expanded(
       child: InkWell(
         onTap: () {
           Navigator.push(
             context,
             MaterialPageRoute<void>(
-              builder: (BuildContext context) => const QuestionsScreen(),
+              builder: (BuildContext context) => QuestionsScreen(
+                questionsList: questionList,
+                testName: text,
+                testThemeColor: color,
+              ),
             ),
           );
         },
@@ -38,11 +44,20 @@ class CategoryScreen extends StatelessWidget {
         // mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           categoryContainer(
-              color: Colors.red, text: "Relegoun test", context: context),
+              color: Colors.red,
+              text: "religion test",
+              context: context,
+              questionList: religionTest),
           categoryContainer(
-              color: Colors.blue, text: "Sports test", context: context),
+              color: Colors.blue,
+              text: "Sports test",
+              context: context,
+              questionList: sportsTest),
           categoryContainer(
-              color: Colors.green, text: "IQ test", context: context),
+              color: Colors.green,
+              text: "IQ test",
+              context: context,
+              questionList: iqTest),
         ],
       ),
     );

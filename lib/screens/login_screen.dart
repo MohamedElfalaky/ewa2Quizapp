@@ -1,10 +1,11 @@
 import 'package:ewa_camp2_quizz_app/screens/category_screen.dart';
 import 'package:flutter/material.dart';
 
+final userNameController = TextEditingController();
+
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
 
-  final userNameController = TextEditingController();
   final formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class LoginScreen extends StatelessWidget {
                     height: 40,
                   ),
                   TextFormField(
-                    // controller: userNameController,
+                    controller: userNameController,
                     validator: (value) {
                       if (value!.isEmpty) {
                         return 'user name cant be empty';
