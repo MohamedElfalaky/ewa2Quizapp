@@ -1,5 +1,5 @@
 import 'package:ewa_camp2_quizz_app/data/questions_and_answers.dart';
-import 'package:ewa_camp2_quizz_app/screens/questions_screen.dart';
+import 'package:ewa_camp2_quizz_app/screens/quiz_app/questions_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 

@@ -1,5 +1,5 @@
-import 'package:ewa_camp2_quizz_app/screens/login_screen.dart';
-import 'package:ewa_camp2_quizz_app/screens/start_screen.dart';
+import 'package:ewa_camp2_quizz_app/screens/quiz_app/login_screen.dart';
+import 'package:ewa_camp2_quizz_app/screens/quiz_app/start_screen.dart';
 import 'package:flutter/material.dart';
 
 class ScoreScreen extends StatelessWidget {

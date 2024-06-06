@@ -1,4 +1,4 @@
-import 'package:ewa_camp2_quizz_app/screens/category_screen.dart';
+import 'package:ewa_camp2_quizz_app/screens/quiz_app/category_screen.dart';
 import 'package:flutter/material.dart';
 
 final userNameController = TextEditingController();

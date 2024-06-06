@@ -1,0 +1,79 @@
+api == link == url 
+
+
+API :
+1- base url : https://newsapi.org  ---> ثااااابت لا يتغير في الابلكيشن
+2- end point: /v2/everything?q=tesla&from=2024-05-06&sortBy=publishedAt&apiKey=7c07f0c86d484b30a5af1289c531cff1
+- متغيرة
+- تتغير بتغير نوع الداتا المراد الحصول عليها بالتنسيق مع الباك اند
+
+
+server connection methods (request methods):
+1- get (  حصول علي بيانات من السيرفر)
+2- post ( اضافة بيانات للسيرفر)
+3- Edit (Patch-Put) تعديل بيانات علي السيرفر
+4- Delete (حذف بيانات من السيرفر)
+
+
+request vs response
+request : connect with server
+response: server reply
+
+
+JSON: communication language between backend and frontend
+JSON: communication language between backend and AI
+JSON: communication language between AI and SyberSecurity
+JSON: communication language between programmers
+
+JSON : Javascript object notation 
+old: XML,,
+
+//////////////////////////////////////
+//////////////////////////////////////
+//////////////////////////////////////
+
+How to call an API in flutter:
+
+1- Make a Model for the response
+2- Make a Repository to call the api
+3- Manage your state 
+
+
+
+1- Model :
+Used to transfer the response form JSON to Dart to be easy to use in our program.
+
+2- Repository:
+Used to make the request.
+
+3- State managment:
+
+
+
+
+-- status code :
+
+200 : success , 201 (create)
+
+400: bad request
+401: unauthrized
+402
+403: forbedden
+404: Not found
+429: to many requests 
+
+
+500: Server error
+501:
+502:
+503: 
+
+
+
+
+///// state management :
+technique to manage our state.
+1- separation of consernes
+2- enhance the performance
+
+ 
