@@ -1,9 +1,34 @@
 import 'package:ewa_camp2_quizz_app/screens/quiz_app/login_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class StartScreen extends StatelessWidget {
+class StartScreen extends StatefulWidget {
   const StartScreen({super.key});
+
+  @override
+  State<StartScreen> createState() => _StartScreenState();
+}
+
+class _StartScreenState extends State<StartScreen>
+    with TickerProviderStateMixin {
+  late AnimationController logoAnimationController;
+  late AnimationController wordAnimationController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    logoAnimationController =
+        AnimationController(vsync: this, duration: Duration(seconds: 3));
+
+    wordAnimationController =
+        AnimationController(vsync: this, duration: Duration(seconds: 6));
+
+    logoAnimationController.forward();
+    wordAnimationController.forward();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,17 +55,25 @@ class StartScreen extends StatelessWidget {
                   //   color: Colors.red,
                   // ),
 
-                  Image.asset(
-                    "images/quizLogo.webp",
-                    height: 200,
-                    width: 200,
+                  SlideTransition(
+                    position:
+                        Tween<Offset>(end: Offset(0, 0), begin: Offset(0, -5))
+                            .animate(logoAnimationController),
+                    child: Image.asset(
+                      "images/quizLogo.webp",
+                      height: 200,
+                      width: 200,
+                    ),
                   ),
-                  Text(
-                    "Welcome with our quizz app",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 9, 178, 234),
-                        fontSize: 26,
-                        fontWeight: FontWeight.bold),
+                  FadeTransition(
+                    opacity: wordAnimationController,
+                    child: Text(
+                      "Welcome with our quizz app",
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 9, 178, 234),
+                          fontSize: 26,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                   Spacer(),
                   SizedBox(
